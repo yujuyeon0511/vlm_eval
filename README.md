@@ -63,30 +63,29 @@ torchrun --nproc-per-node=2 run.py --data MME --model Gemma3-Custom --verbose
 - OCRVQA_TESTCORE
 - TextVQA_VAL
 - DocVQA_VAL
-- DocVQA_TEST
 - InfoVQA_VAL
-- InfoVQA_TEST
 - ChartQA_TEST
 - GQA_TestDev_Balanced
 
-### image_shortqa
-- LiveMMBench_Infographic
-- LiveMMBench_Perception
-- LiveMMBench_Reasoning
-- LiveMMBench_Reasoning_circular
-- hle
+### image_caption
+- COCO_VAL
 
 ### image_mcq
 - RealWorldQA
 - ScienceQA_VAL
 - ScienceQA_TEST
+- BLINK
+- A-OKVQA
+- AI2D_TEST
+- AI2D_TEST_NO_MASK
+- MMMU_DEV_VAL
+- MMMU_TEST
 
 ## 5. 참고 사항
 
 - 모델은 Hugging Face ID 또는 로컬 경로 사용 가능
 - 평가 결과는 `outputs/` 폴더에 자동 저장
 - 다중 GPU 환경에서는 `--nproc-per-node` 조정 필요
-
 
 # Gemma3 Benchmark Results
 
@@ -153,3 +152,9 @@ https://huggingface.co/google/gemma-3-4b-it
 | SpatialSense VQA|           | 50.9           | 60.0           | 59.4           |
 | CountBenchQA    |           | 26.1           | 17.8           | 68.0           |
 
+## 5. 추가 참고 사항
+
+- 아래 멀티모달 벤치마크는 **VLMEvalKit에 기본 포함되어 있지 않으며**, 별도의 데이터 준비 및 커스텀 스크립트가 필요할 수 있습니다.
+  - CountBenchQA
+  - SpatialSense VQA
+  - AREMI (ReMI)
