@@ -54,7 +54,7 @@ torchrun --nproc-per-node=2 run.py --data MME --model Gemma3-Custom --verbose
 
 데이터셋은 `vlmeval/dataset` 경로에서 관리됩니다. 다음은 자주 사용하는 데이터셋 목록입니다.
 
-### CharXiv 시각 데이터셋
+### CharXiv
 - CharXiv_descriptive_val
 - CharXiv_reasoning_val
 
