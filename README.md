@@ -19,6 +19,57 @@ Gemma3 모델 관련 의존성 설치:
 pip install git+https://github.com/huggingface/transformers@v4.49.0-Gemma-3
 ```
 
+# 설치 후 API 키 설정 (API Key Setup)
+
+GPT-4V, Gemini-Pro-V 등의 API 모델로 추론하거나, LLM API를 정답 판별(Judge) 또는 선택 추출기로 사용할 경우, 먼저 API 키 설정이 필요합니다.
+
+VLMEvalKit은 API 키가 설정되어 있을 경우 judge LLM을 통해 모델 출력에서 정답을 추출하며, 키가 없을 경우 정확 일치 모드(exact matching)를 사용합니다. 정확 일치 모드는 Yes/No 유형 및 객관식(Multi-choice) 문제에만 적용됩니다.
+
+환경 변수로 직접 설정하거나 `$VLMEvalKit/.env` 파일을 생성하여 사용할 수 있습니다. `.env` 파일 예시는 다음과 같습니다:
+
+```
+# $VLMEvalKit/.env 파일 예시
+# 상용 VLM API 키 설정
+
+# QwenVL APIs
+DASHSCOPE_API_KEY=
+
+# Gemini (Google Cloud)
+GOOGLE_API_KEY=
+
+# OpenAI API
+OPENAI_API_KEY=
+OPENAI_API_BASE=
+
+# StepAI API
+STEPAI_API_KEY=
+
+# REKA API
+REKA_API_KEY=
+
+# GLMV API
+GLMV_API_KEY=
+
+# CongRong API
+CW_API_BASE=
+CW_API_KEY=
+
+# SenseNova API
+SENSENOVA_API_KEY=
+
+# Hunyuan-Vision API
+HUNYUAN_SECRET_KEY=
+HUNYUAN_SECRET_ID=
+
+# LMDeploy API
+LMDEPLOY_API_BASE=
+
+# API 모델 호출 시 프록시 설정 (선택사항)
+EVAL_PROXY=
+```
+
+빈 칸에 각자의 API 키를 입력하면 평가 실행 시 자동으로 불러와 사용됩니다.
+
 ## 2. 모델 설정 (Configuration)
 
 `configs/models/config.py` 파일을 열어 사용할 모델을 설정합니다. 예를 들어 로컬에서 커스텀 학습한 Gemma3 모델을 사용하고자 할 경우 다음과 같이 수정합니다.
