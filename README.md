@@ -158,3 +158,4 @@ https://huggingface.co/google/gemma-3-4b-it
   - CountBenchQA
   - SpatialSense VQA
   - AREMI (ReMI)
+  - TallyQA
