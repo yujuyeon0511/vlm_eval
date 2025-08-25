@@ -138,6 +138,10 @@ torchrun --nproc-per-node=2 run.py --data MME --model Gemma3-Custom --verbose
 - 평가 결과는 `outputs/` 폴더에 자동 저장
 - 다중 GPU 환경에서는 `--nproc-per-node` 조정 필요
 
+# Korean Benchmark 
+KOFFVQA
+https://github.com/maum-ai/KOFFVQA
+
 # Gemma3 Benchmark Results
 
 https://huggingface.co/google/gemma-3-4b-it
