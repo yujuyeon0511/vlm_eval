@@ -139,8 +139,24 @@ torchrun --nproc-per-node=2 run.py --data MME --model Gemma3-Custom --verbose
 - 다중 GPU 환경에서는 `--nproc-per-node` 조정 필요
 
 # Korean Benchmark 
-KOFFVQA
-https://github.com/maum-ai/KOFFVQA
+다양한 한국어 멀티모달/QA 벤치마크를 정리한 목록입니다.  
+(출처: GitHub / HuggingFace / 논문별 공개 자료)
+
+| 벤치마크 | 링크 | 특징 / 비고 |
+|----------|------|-------------|
+| **KOFFVQA** | [GitHub](https://github.com/maum-ai/KOFFVQA) | CVPRW 2025. 외국 벤치마크를 한국어로 번역한 느낌. 범용 VQA 벤치마크 |
+| **K-DTCBench** | [HuggingFace](https://huggingface.co/datasets/NCSOFT/K-DTCBench) | 문서·표·손글씨 등 실제 사용된 데이터 포함 |
+| **KO-VQA-Benchmark** | [GitHub](https://github.com/Marker-Inc-Korea/KO-VQA-Benchmark?tab=readme-ov-file) | AIHub 데이터 기반으로 제작된 한국어 VQA 벤치마크 |
+| **KRETA** | [HuggingFace](https://huggingface.co/datasets/tabtoyou/KRETA) | EMNLP 2025. 다양한 분야를 아우르는 종합 벤치마크 |
+| **K-viscuit** | [HuggingFace](https://huggingface.co/datasets/ddehun/k-viscuit) | 한국 문화 관련 4지선다 문제 제공 |
+| **K-LLaVA-W** | [HuggingFace](https://huggingface.co/datasets/NCSOFT/K-LLaVA-W) | LLaVA-Bench-in-the-Wild 한국어 번역판 |
+| **K-SEED** | [HuggingFace](https://huggingface.co/datasets/NCSOFT/K-SEED) | SEED Bench 한국어 번역판 |
+
+---
+
+### 참고
+- **CVPRW 2025**: KOFFVQA 공개  
+- **EMNLP 2025**: KRETA 공개  
 
 # Gemma3 Benchmark Results
 
